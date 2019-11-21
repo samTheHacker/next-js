@@ -40,7 +40,9 @@ const Index = ({ posts }) => {
       <ul>
         {posts.map(post => (
           <li key={post.id}>
-            <Link href={`/post?id=${post.id}`}>{post.title}</Link>
+            <Link href={`/post?id=${post.id}`} as={`/p/${post.id}`}>
+              <a>{post.title}</a>
+            </Link>
           </li>
         ))}
       </ul>
@@ -51,7 +53,7 @@ const Index = ({ posts }) => {
 Index.getInitialProps = async () => {
   const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
   const { data } = res;
-  console.log(data[0]);
+  // console.log(data[0]);
 
   return { posts: data };
 };
