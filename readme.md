@@ -1,3 +1,5 @@
-Next JS Modern React Bootcamp
+## Based on Modern React Bootcamp by Colt Steele
+
+Next JS 
 
 🖥🖱💾📲
